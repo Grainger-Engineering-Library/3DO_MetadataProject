@@ -21,9 +21,9 @@
 -->
 <xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd" xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd">
   <xsi:element name="ThreeDO">
-<!--
-ThreeDO complex type object definitions
--->    
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">ThreeDO complex type object definitions.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:Creator"/>
@@ -35,6 +35,12 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="Creator">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">CREATOR: A designation that identifies the creator(s) of the 3D object.
+        Each 3D object held within the University must have been created by an individual affiliated with the 
+        University. The Creator is mandatory whenever a 3D object is submitted. The Creator is repeatable if
+        multiple persons worked on a single 3D object.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:CreatorName" minOccurs="1" maxOccurs="1"/>
@@ -44,14 +50,39 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="CreatorName">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that uniquely identifies the Creator. Each individual
+        Creator must be uniquely identifiable, by both the netID and full name. If the Creator is a group,
+        only group name needs to be specified. Name should be listed First Middle Last.
+        Groups should be listed by full group names. This element possesses type and value attributes.
+        Type is the name of the identifier (i.e. netID) and value would be the Creator’s unique identifier
+        (i.e. jsmith45).</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" form="qualified" type="xsi:NCName"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="CreatorStatus" type="xsi:string"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that classifies the Creator based on current status within the University
+        when creating the 3D object. Each 3D object held within the University must have been created by an individual affiliated
+        with the University. Only one value should be recorded for the CreatorStatus. If the Creator has multiple roles or
+        appointments with the University, CreatorStatus should be repeated. If the Creator is a group, list all applicable
+        member statuses.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="CreatorAffiliation" type="xsi:string"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that associates the Creator with a department or working group on the
+        Illinois campus. Tracks how many 3d objects were created, by department. Only one value should be recorded for the
+        CreatorAffiliation. If the Creator has multiple roles or appointments with the University, CreatorAffiliation
+        should be repeated.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="Funding">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A container that provides the information on the funding that sponsored the creation
+        of the Object.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:FundingAgency" minOccurs="1" maxOccurs="1"/>
@@ -60,8 +91,24 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="FundingAgency" type="xsi:NCName"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation describes what actions are permissible regarding the object, under the
+      rights statement.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="FundingNumber" type="xsi:NCName"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation describes what actions are permissible regarding the object, under the rights
+        statement.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="Course">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that identifies the University course that the creator(s) of the 3D object
+        created the object for. 3D objects held within the University may have been created specifically for course assignments,
+        or be used by instructors as teaching material. The University would like the objects to be searchable by which classes
+        they are affiliated with. The Course is optional as not all objects will be created for/within a course, but highly
+        recommended when the object was created for/within one. Course should be repeated if the object is affiliated with multiple
+        courses.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:CourseName" minOccurs="1" maxOccurs="1"/>
@@ -72,20 +119,42 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="CourseName">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that uniquely identifies the CourseName. Identifier values cannot be
+        assumed to be unique across domains; the combination of Type and Value should ensure uniqueness. This element possesses type and value attributes.   
+        Type is the name of the identifier (i.e. courseID) and value is the course abbreviation (i.e. LIS562AO). These values should be taken from
+        the Course Catalog. The value attribute should be repeated when a course is listed under multiple titles.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" use="required" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="CourseInstructor">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that uniquely identifies the CourseInstructor. Identifier values cannot be assumed to be unique
+        across domains; the combination of Type and Value should ensure uniqueness. CourseInstructor should be listed as First Middle Last.
+        This element possesses type and value attributes.
+        Type is the name of the identifier(i.e. netID) and value is the Instructor’s unique identifier (i.e. jsmith45).</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" use="required" form="qualified" type="xsi:NCName"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="CourseSemester" type="xsi:NCName"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for the academic semester the Course took place.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="CourseYear" type="xsi:integer"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">The year the Course took place.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="Object">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation used to identify and describe 3D objects. 3D objects need to be described for
+        accessibility and preservation purposes within the university. Designation should be repeated for each object within a file. </xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:ObjectTitle" minOccurs="1" maxOccurs="1"/>
@@ -110,14 +179,37 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="ObjectTitle" type="xsi:string"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that semantically identifies the Object. ObjectTitle allows creators
+        to name their own objects. Entire category should be repeated for both title and ID.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="ObjectIdentifier">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that uniquely identifies the object. Objects can potentially be named
+        the same thing and still need to be identified. This element possesses type. Type is the name of the identifier
+        (i.e. objectID).</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="DateCreated" type="xsi:date"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for the date on which the 3D object was created. Including the date an
+        object was published will aid searchability and preservation purposes. DateCreated should be in the ISO format.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="Description" type="xsi:string"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that gives a human readable summary of the object. Category is optional but highly
+        recommended. Description allows the creator of an object to describe their work in their own words. </xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="Origin">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that describes the origins of the object. The origins of the object is classified
+        as one of three classifications: derived from a previous IP, or modeled after a RealOject. Element is mandatory but sub-elements
+        are optional. At least one of the three sub-elements should be chosen. Sub-elements are repeatable and more than one can be
+        chosen to account for an object that has its origins in multiple sources.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:Derived" minOccurs="0" maxOccurs="unbounded"/>
@@ -127,6 +219,10 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="Derived">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that describes the IP from which an object was derived. Element is optional, but
+        highly recommended for objects that are inspired by another source. </xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:DerivedTitle" minOccurs="1" maxOccurs="unbounded"/>
@@ -135,18 +231,33 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="DerivedTitle">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for the title of an existing IP that the object is derived from. This element
+        possesses “type” and “value” attributes. If used, “type” should state the name of the authority, and “value” should be
+        the identifier. LOC Subject Headings should be used when available. If not available, another persistent identifier like
+        the UPC should be used.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" use="required" form="qualified"/>
       <xsi:attribute name="value" use="required" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="DerivedCreator">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for the creator of an existing IP that the object is derived from. This element
+        possesses type and value attributes. Type should be the Library of Congress and value should be the unique identifier listed
+        in LOC of the company or institution that holds rights to the object. Contents for value can be taken from Library of
+        Congress Name Authority Headings.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" use="required" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="RealObject">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that indicates if the 3D object has its origins in a real life object.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:choice>
         <xsi:sequence>
@@ -157,20 +268,45 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="ExistanceStatement" type="xsi:boolean"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that shows whether or not the 3D object has its origins in a real life object.
+        “true”=PRESENCE, “false”=ABSENCE, where “presence” means that the object does have its origins in a real life object,
+        and “absence” the opposite. </xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="Holding">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for information on the institution (i.e. museum/repository) that
+        currently holds the object. This element possesses type and value attributes. Type should be the name of the
+        institution that holds the object (i.e. sh85127058) and value would be the institution’s unique identifier
+        for the object. Contents for type should be taken from Library of Congress Subject Headings.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" use="required" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="OriginalWork" type="xsi:boolean"/>
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that indicates if the 3D object was created originally by the artist.</xsi:documentation>
+    </xsi:annotation>
   <xsi:element name="SourceFormat">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for information on the format of the source file. The file type
+        of objects needs to be represented for the purposes of preservation and accessibility. This element possesses 
+        type and value attributes. Type is the name of the registry identifier(i.e. PUID) and value is the unique
+        identifier (i.e. fmt/902). PRONOM is suggested as the authority, if applicable.
+      </xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" form="qualified" type="xsi:string"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="CreatedWith">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for information on the Software and/or Hardware that was used
+        in the creation of the Object.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:Software" minOccurs="1" maxOccurs="unbounded"/>
@@ -179,6 +315,9 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="Software">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that describes the software used to create the Object.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:SoftwareName" minOccurs="1" maxOccurs="1"/>
@@ -189,25 +328,46 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="SoftwareName">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that identifies the software used to create the Object. This element
+        possesses an optional type and value attributes. Type is the name of the authority and value is the unique identifier.
+        Include whenever applicable. Library of Congress is suggested as the authority.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="SoftwareCreator">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that identifies the entity that created the Software. This element
+        possesses an optional type and value attributes. Type is the name of the authority and value is the unique identifier.
+        Include whenever applicable. Library of Congress is suggested as the authority.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="SoftwareRightsType" type="xsi:NCName"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation to describe the type of rights that belong to the Software.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="SoftwareRightsStatement">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that describes what actions are permissible regarding the
+        Software, under the rights statement. This element possesses an optional type and value attributes, that can be
+        used to link to the rights statement. Type is the URI and value is the handle.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" form="qualified" type="xsi:anyURI"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="Hardware">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that describes the hardware used to create the Object.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:HardwareName" minOccurs="1" maxOccurs="1"/>
@@ -216,13 +376,25 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="HardwareName" type="xsi:string"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that identifies the hardware used to create the Object.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="HardwareCreator">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that identifies the entity that created the Hardware. This element
+        possesses an optional type and value attributes. Type is the name of the authority and value is the unique identifier.
+        Include whenever applicable. Library of Congress is suggested as the authority.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType mixed="true">
       <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
       <xsi:attribute name="value" form="qualified"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="Geometry">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation that specifies the type and amount of shapes that constitute
+        the 3D object. Element should be repeated if the object is made up of more than one geometrical shape.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:GeometryType" minOccurs="1" maxOccurs="1"/>
@@ -231,13 +403,41 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="GeometryType" type="xsi:string"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that describes what type of which the shape the 3D object
+      is constituted.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="GeometryAmount" type="xsi:integer"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation for the amount of geometrical shapes that a 3D object is
+      constituted by. Inputs should be represented numerically.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Vertices" type="xsi:integer"/>
   <xsi:element name="FileSize" type="xsi:integer"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that specifies the amount of vertices within the 3D object.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Textures" type="xsi:integer"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation for the amount of textures that constitute the 3D object. Inputs
+      must be represented numerically.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Materials" type="xsi:integer"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation for amount of materials that constitute the 3D object.
+      Inputs must be represented numerically.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Rigged" type="xsi:boolean"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that specifies whether or not the 3D object is rigged, which
+      allows for easier manipulation of the 3D object. Rigged objects are more easily manipulated by future students,
+      and can be used in art projects, games, movies, or VR experiences. </xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Animation">
+    <xsi:annotation>
+      <xsi:documentation xml:lang="en">A designation for 3D objects that include animation. Contains subelement
+        AnimatedRunTime. The element Animation is mandatory for 3D objects that are animated.</xsi:documentation>
+    </xsi:annotation>
     <xsi:complexType>
       <xsi:sequence>
         <xsi:element ref="ThreeDO:AnimatedRunTime" minOccurs="1" maxOccurs="1"/>
@@ -245,10 +445,34 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="AnimatedRunTime" type="xsi:NMTOKEN"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that describes the length (in time) of the animation. Inputs
+      should be formated by numerical value in Hours:Minutes:Seconds:Milliseconds HH:MM:SS:MM. </xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Normals" type="xsi:boolean"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that specifies whether or not the 3D object contains normals,
+      a vector in 3D-space that is perpendicular to two other vectors (determined by two edges of a face)
+      Inclusion of normals helps with calculating reflections and back-face culling, which speeds up object
+      rendering. Inputs are constrained by true=PRESENCE, false=ABSENCE.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="VertexColors" type="xsi:boolean"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that specifies whether or not the 3D object includes vertex
+      colors. Vertex colors define the shape of how a model can be colored. Inputs are constrained by true=PRESENCE,
+      false=ABSENCE.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="UVMapped" type="xsi:boolean"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation that specifies whether or not the 3D object is UV mapped. Inputs
+      are constrained by true=PRESENCE, false=ABSENCE.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Tags" type="xsi:string"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation for user-generated tags that describe the subject matter of the
+      3D object. Tags will aid in the accessibility and searchability of 3D objects. Creators will be able to describe
+      their work using their own tags, and librarians will be able to add tags. </xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="Rights">
     <xsi:complexType>
       <xsi:sequence>
@@ -258,5 +482,12 @@ ThreeDO complex type object definitions
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="RightsType" type="xsi:NCName"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation to describe the type of rights that belong to the Object.</xsi:documentation>
+  </xsi:annotation>
   <xsi:element name="RightsStatement" type="xsi:string"/>
+  <xsi:annotation>
+    <xsi:documentation xml:lang="en">A designation describes what actions are permissible regarding the object, under
+      the rights statement.</xsi:documentation>
+  </xsi:annotation>
 </xsi:schema>
