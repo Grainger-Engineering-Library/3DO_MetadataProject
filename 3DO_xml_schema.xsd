@@ -20,7 +20,6 @@
 ******************************************************************************************************
 -->
 <xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd" xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd">
-  <xsi:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="xsi.xsd"/>
   <xsi:element name="ThreeDO">
 <!--
 ThreeDO complex type object definitions
@@ -33,7 +32,6 @@ ThreeDO complex type object definitions
         <xsi:element ref="ThreeDO:Object"/>
         <xsi:element ref="ThreeDO:Rights"/>
       </xsi:sequence>
-      <xsi:attribute ref="xsi:schemaLocation" use="required"/>
     </xsi:complexType>
   </xsi:element>
   <xsi:element name="Creator">
