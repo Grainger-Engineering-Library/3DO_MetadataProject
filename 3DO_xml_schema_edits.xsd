@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    ***************************************************************************
+   *                                                                            *
+   *                               ThreeDO                                      * 
+   *                    3D Object Metadata XML Schema                           *
+   *                                                                            *       
+   *                             VERSION 1.0                                    *
+   *                                                                            *   
+   *                                                                            *
+   *                            December 9, 2018                                *
+   *                                                                            *
+   *                                                                            *
+   *  editors: Halle Burns, Edward Gloor, Garrett McCommas, Daria Orlowska      *
+   *                                                                            *   
+    ****************************************************************************
+
+
+******************************************************************************************************
+-->
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="http://www.github.com/hburns2/3DO_MetadataProject" xmlns:ThreeDO="http://www.github.com/hburns2/3DO_MetadataProject">
+  <xsi:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="xsi.xsd"/>
+  <xsi:element name="ThreeDO">
+<!--
+ThreeDO complex type object definitions
+-->    
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:Creator"/>
+        <xsi:element minOccurs="0" ref="ThreeDO:Funding"/>
+        <xsi:element minOccurs="0" ref="ThreeDO:Course"/>
+        <xsi:element ref="ThreeDO:Object"/>
+        <xsi:element ref="ThreeDO:Rights"/>
+      </xsi:sequence>
+      <xsi:attribute ref="xsi:schemaLocation" use="required"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="Creator">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:CreatorName" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:CreatorStatus" minOccurs="1" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:CreatorAffiliation" minOccurs="0" maxOccurs="unbounded"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="CreatorName">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="CreatorStatus" type="xsi:string"/>
+  <xsi:element name="CreatorAffiliation" type="xsi:string"/>
+  <xsi:element name="Funding">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:FundingAgency" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:FundingNumber" minOccurs="1" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="FundingAgency" type="xsi:NCName"/>
+  <xsi:element name="FundingNumber" type="xsi:NCName"/>
+  <xsi:element name="Course">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:CourseName" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:CourseInstructor" minOccurs="1" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:CourseSemester" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:CourseYear" minOccurs="1" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="CourseName">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" use="required" form="qualified"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="CourseInstructor">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" use="required" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="CourseSemester" type="xsi:NCName"/>
+  <xsi:element name="CourseYear" type="xsi:integer"/>
+  <xsi:element name="Object">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:ObjectTitle" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:ObjectIdentifier" minOccurs="1" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:DateCreated" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Description" minOccurs="0" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Origin" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:SourceFormat" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:CreatedWith" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Geometry" minOccurs="1" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:Vertices" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:FileSize" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Textures" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Materials" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Rigged" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Animation" minOccurs="0" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Normals" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:VertexColors" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:UVMapped" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:Tags" minOccurs="1" maxOccurs="unbounded"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="ObjectTitle" type="xsi:string"/>
+  <xsi:element name="ObjectIdentifier">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="DateCreated" type="xsi:date"/>
+  <xsi:element name="Description" type="xsi:string"/>
+  <xsi:element name="Origin">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:Derived" minOccurs="0" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:RealObject" minOccurs="0" maxOccurs="unbounded"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="Derived">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:DerivedTitle" minOccurs="1" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:DerivedCreator" minOccurs="1" maxOccurs="unbounded"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="DerivedTitle">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" use="required" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="DerivedCreator">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" use="required" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="RealObject">
+    <xsi:complexType>
+      <xsi:choice>
+        <xsi:sequence>
+          <xsi:element ref="ThreeDO:ExistanceStatement" minOccurs="1" maxOccurs="1"/>
+          <xsi:element ref="ThreeDO:Holding" minOccurs="0" maxOccurs="1"/>
+        </xsi:sequence>
+      </xsi:choice>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="ExistanceStatement" type="xsi:boolean"/>
+  <xsi:element name="Holding">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" use="required" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" use="required" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="SourceFormat">
+    <xsi:complexType>
+      <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="CreatedWith">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:Software" minOccurs="1" maxOccurs="unbounded"/>
+        <xsi:element ref="ThreeDO:Hardware" minOccurs="0" maxOccurs="unbounded"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="Software">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:SoftwareName" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:SoftwareCreator" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:SoftwareRightsType" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:SoftwareRightsStatement" minOccurs="0" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="SoftwareName">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="SoftwareCreator">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="SoftwareRightsType" type="xsi:NCName"/>
+  <xsi:element name="SoftwareRightsStatement">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" form="qualified" type="xsi:anyURI"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="Hardware">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:HardwareName" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:HardwareCreator" minOccurs="1" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="HardwareName" type="xsi:string"/>
+  <xsi:element name="HardwareCreator">
+    <xsi:complexType mixed="true">
+      <xsi:attribute name="type" form="qualified" type="xsi:NCName"/>
+      <xsi:attribute name="value" form="qualified" type="xsi:NCName"/>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="Geometry">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:GeometryType" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:GeometryAmount" minOccurs="1" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="GeometryType" type="xsi:string"/>
+  <xsi:element name="GeometryAmount" type="xsi:integer"/>
+  <xsi:element name="Vertices" type="xsi:integer"/>
+  <xsi:element name="FileSize" type="xsi:integer"/>
+  <xsi:element name="Textures" type="xsi:integer"/>
+  <xsi:element name="Materials" type="xsi:integer"/>
+  <xsi:element name="Rigged" type="xsi:boolean"/>
+  <xsi:element name="Animation">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:AnimatedRunTime" minOccurs="1" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="AnimatedRunTime" type="xsi:NMTOKEN"/>
+  <xsi:element name="Normals" type="xsi:boolean"/>
+  <xsi:element name="VertexColors" type="xsi:boolean"/>
+  <xsi:element name="UVMapped" type="xsi:boolean"/>
+  <xsi:element name="Tags" type="xsi:NCName"/>
+  <xsi:element name="Rights">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element ref="ThreeDO:RightsType" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:RightsStatement" minOccurs="1" maxOccurs="1"/>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+  <xsi:element name="RightsType" type="xsi:NCName"/>
+  <xsi:element name="RightsStatement" type="xsi:string"/>
+</xsi:schema>
