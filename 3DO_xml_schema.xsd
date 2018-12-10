@@ -19,7 +19,7 @@
 
 ******************************************************************************************************
 -->
-<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="http://www.github.com/hburns2/3DO_MetadataProject" xmlns:ThreeDO="http://www.github.com/hburns2/3DO_MetadataProject">
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" targetNamespace="http://www.github.com/hburns2/3DO_MetadataProject/3DO_xml_schema.xsd" xmlns:ThreeDO="http://www.github.com/hburns2/3DO_MetadataProject/3DO_xml_schema.xsd">
   <xsi:import namespace="http://www.w3.org/2001/XMLSchema" schemaLocation="xsi.xsd"/>
   <xsi:element name="ThreeDO">
 <!--
