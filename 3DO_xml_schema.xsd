@@ -183,7 +183,7 @@ ThreeDO complex type object definitions
       <xsi:sequence>
         <xsi:element ref="ThreeDO:SoftwareName" minOccurs="1" maxOccurs="1"/>
         <xsi:element ref="ThreeDO:SoftwareCreator" minOccurs="1" maxOccurs="1"/>
-        <xsi:element ref="ThreeDO:SoftwareRightsType" minOccurs="1" maxOccurs="1"/>
+        <xsi:element ref="ThreeDO:SoftwareRightsType" minOccurs="0" maxOccurs="1"/>
         <xsi:element ref="ThreeDO:SoftwareRightsStatement" minOccurs="0" maxOccurs="1"/>
       </xsi:sequence>
     </xsi:complexType>
