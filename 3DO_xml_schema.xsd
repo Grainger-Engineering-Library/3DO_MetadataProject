@@ -248,7 +248,7 @@ ThreeDO complex type object definitions
   <xsi:element name="Normals" type="xsi:boolean"/>
   <xsi:element name="VertexColors" type="xsi:boolean"/>
   <xsi:element name="UVMapped" type="xsi:boolean"/>
-  <xsi:element name="Tags" type="xsi:NCName"/>
+  <xsi:element name="Tags" type="xsi:string"/>
   <xsi:element name="Rights">
     <xsi:complexType>
       <xsi:sequence>
