@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
- xsi1:schemaLocation="https://uofi.box.com/s/l0dfuc118pqqjkbhvypqv7ngn30h92p3 https://uofi.box.com/s/l0dfuc118pqqjkbhvypqv7ngn30h92p3"
- xmlns:ThreeDO="https://uofi.box.com/s/l0dfuc118pqqjkbhvypqv7ngn30h92p3"
+ xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
+ xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema">
     <ThreeDO:Creator>
         <ThreeDO:CreatorName ThreeDO:type="netID" ThreeDO:value="jdoe123">Jane Doe</ThreeDO:CreatorName>
