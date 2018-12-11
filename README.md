@@ -1,4 +1,5 @@
-# ThreeDO Metadata Schema for 3D Objects at Illinois: Halle Burns, Edward Gloor, Garrett McComas, Daria Orlowska - University of Illinois at Urbana-Champaign
+# ThreeDO Metadata Schema for 3D Objects at Illinois
+**Halle Burns, Edward Gloor, Garrett McComas, Daria Orlowska - University of Illinois at Urbana-Champaign**
 
 This is the workspace for group project from UIUC iSchool Metadata course. Group members include: Edward Gloor (elgloor), Garrett McComas (mccomasg), Daria Orlowska (dorlow2), and Halle Burns (hburns2).
 
