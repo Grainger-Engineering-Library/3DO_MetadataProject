@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
- xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
+ xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd 3DO_xml_schema_edits.xsd" 
  xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema">
     <ThreeDO:Creator>
