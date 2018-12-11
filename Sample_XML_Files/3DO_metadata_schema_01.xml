@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
+ xsi1:schemaLocation="https://uofi.box.com/s/l0dfuc118pqqjkbhvypqv7ngn30h92p3 https://uofi.box.com/s/l0dfuc118pqqjkbhvypqv7ngn30h92p3"
+ xmlns:ThreeDO="https://uofi.box.com/s/l0dfuc118pqqjkbhvypqv7ngn30h92p3"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <ThreeDO:Creator>
+        <ThreeDO:CreatorName ThreeDO:type="netID" ThreeDO:value="jdoe123">Jane Doe</ThreeDO:CreatorName>
+        <ThreeDO:CreatorStatus>Faculty</ThreeDO:CreatorStatus>
+        <ThreeDO:CreatorAffiliation>Art--Studio</ThreeDO:CreatorAffiliation>
+    </ThreeDO:Creator>
+    <ThreeDO:Course>
+        <ThreeDO:CourseName ThreeDO:type="courseID" ThreeDO:value="ECE 419">Production Computer Graphics</ThreeDO:CourseName>
+        <ThreeDO:CourseInstructor ThreeDO:type="netID" ThreeDO:value="jdoe123">Jane Doe</ThreeDO:CourseInstructor>
+        <ThreeDO:CourseInstructor ThreeDO:type="netID" ThreeDO:value="selms">Sandra Ellen Elms-Roko</ThreeDO:CourseInstructor>
+        <ThreeDO:CourseSemester>Fall</ThreeDO:CourseSemester>
+        <ThreeDO:CourseYear>2018</ThreeDO:CourseYear>
+    </ThreeDO:Course>
+    <ThreeDO:Object>
+        <ThreeDO:ObjectTitle>Handpainted BotW Cooking Pot</ThreeDO:ObjectTitle>
+        <ThreeDO:ObjectIdentifier ThreeDO:type="objectID">60b0d624b8534b3bb6ccce647ad3587e</ThreeDO:ObjectIdentifier>
+        <ThreeDO:DateCreated>2017-08-19</ThreeDO:DateCreated>
+        <ThreeDO:Description>A little side project I’ve been working on to practise different materials and convert something existing into my handpainted style! This is the Breath of the Wild cooking pot with the ingredients to cook up a nice stew! Had a lot of fun with the different materials in this! All diffuse handpainted.</ThreeDO:Description>
+        <ThreeDO:Origin>
+            <ThreeDO:Derived>
+                <ThreeDO:DerivedTitle ThreeDO:type="UPC" ThreeDO:value="045496904159">The Legend of Zelda: Breath of the Wild</ThreeDO:DerivedTitle>
+                <ThreeDO:DerivedCreator ThreeDO:type="LOC" ThreeDO:value="n 80155453">Nintendo</ThreeDO:DerivedCreator>
+            </ThreeDO:Derived>
+        </ThreeDO:Origin>
+        <ThreeDO:SourceFormat ThreeDO:type="PUID" ThreeDO:value="fmt/1210">.obj</ThreeDO:SourceFormat>
+        <ThreeDO:CreatedWith>
+            <ThreeDO:Software>
+                <ThreeDO:SoftwareName ThreeDO:type="LOC" ThreeDO:value="n 00063653">Blender</ThreeDO:SoftwareName>
+                <ThreeDO:SoftwareCreator ThreeDO:type="LOC" ThreeDO:value="n 2007052974">Blender Foundation</ThreeDO:SoftwareCreator>
+                <ThreeDO:SoftwareRightsType>License</ThreeDO:SoftwareRightsType>
+                <ThreeDO:SoftwareRightsStatement ThreeDO:type="URI" ThreeDO:value="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License</ThreeDO:SoftwareRightsStatement>
+            </ThreeDO:Software>
+        </ThreeDO:CreatedWith>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>quads</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>5500</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>triangles</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>1000</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>lines</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>4</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>converted to triangles</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>11900</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Vertices>6200</ThreeDO:Vertices>
+        <ThreeDO:FileSize>150000</ThreeDO:FileSize>
+        <ThreeDO:Textures>7</ThreeDO:Textures>
+        <ThreeDO:Materials>9</ThreeDO:Materials>
+        <ThreeDO:Rigged>false</ThreeDO:Rigged>
+        <ThreeDO:Normals>true</ThreeDO:Normals>
+        <ThreeDO:VertexColors>false</ThreeDO:VertexColors>
+        <ThreeDO:UVMapped>true</ThreeDO:UVMapped>
+        <ThreeDO:Tags>food</ThreeDO:Tags>
+        <ThreeDO:Tags>fanart</ThreeDO:Tags>
+        <ThreeDO:Tags>mushroom</ThreeDO:Tags>
+        <ThreeDO:Tags>soldier</ThreeDO:Tags>
+        <ThreeDO:Tags>meat</ThreeDO:Tags>
+        <ThreeDO:Tags>fire</ThreeDO:Tags>
+        <ThreeDO:Tags>cooking</ThreeDO:Tags>
+        <ThreeDO:Tags>stew</ThreeDO:Tags>
+        <ThreeDO:Tags>campfire</ThreeDO:Tags>
+        <ThreeDO:Tags>botw</ThreeDO:Tags>
+        <ThreeDO:Tags>handpainted</ThreeDO:Tags>
+        <ThreeDO:Tags>blender3d</ThreeDO:Tags>
+        <ThreeDO:Tags>gameart</ThreeDO:Tags>
+        <ThreeDO:Tags>zelda</ThreeDO:Tags>
+    </ThreeDO:Object>
+    <ThreeDO:Rights>
+        <ThreeDO:RightsType>License</ThreeDO:RightsType>
+        <ThreeDO:RightsStatement>CC-0</ThreeDO:RightsStatement>
+    </ThreeDO:Rights>
+</ThreeDO:ThreeDO>

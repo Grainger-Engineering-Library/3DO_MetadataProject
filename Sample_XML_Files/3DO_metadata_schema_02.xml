@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
+ xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd 3DO_xml_schema_edits.xsd"
+ xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <ThreeDO:Creator>
+        <ThreeDO:CreatorName ThreeDO:type="netID" ThreeDO:value="jdoe321">John Doe</ThreeDO:CreatorName>
+        <ThreeDO:CreatorStatus>Undergraduate student</ThreeDO:CreatorStatus>
+        <ThreeDO:CreatorAffiliation>Information Sciences</ThreeDO:CreatorAffiliation>
+    </ThreeDO:Creator>
+    <ThreeDO:Course>
+        <ThreeDO:CourseName ThreeDO:type="courseID" ThreeDO:value="IS562">Metadata in Theory and Practice</ThreeDO:CourseName>
+        <ThreeDO:CourseInstructor ThreeDO:type="netID" ThreeDO:value="rbettivi">Rhiannon Bettivia</ThreeDO:CourseInstructor>
+        <ThreeDO:CourseInstructor ThreeDO:type="netID" ThreeDO:value="jmcdonou">Jerome P McDonough</ThreeDO:CourseInstructor>
+        <ThreeDO:CourseSemester>Fall</ThreeDO:CourseSemester>
+        <ThreeDO:CourseYear>2018</ThreeDO:CourseYear>
+    </ThreeDO:Course>
+    <ThreeDO:Object>
+        <ThreeDO:ObjectTitle>132 Ditto</ThreeDO:ObjectTitle>
+        <ThreeDO:ObjectIdentifier ThreeDO:type="objectID">3cc88f64078f4827a6f0e08b330cdc28</ThreeDO:ObjectIdentifier>
+        <ThreeDO:DateCreated>2015-04-02</ThreeDO:DateCreated>
+        <ThreeDO:Description>A model of the Pokémon Ditto.</ThreeDO:Description>
+        <ThreeDO:Origin>
+            <ThreeDO:Derived>
+                <ThreeDO:DerivedTitle ThreeDO:type="UPC" ThreeDO:value="045496730734">Pokémon – Red Version</ThreeDO:DerivedTitle>
+                <ThreeDO:DerivedCreator ThreeDO:type="LOC" ThreeDO:value="no2010013432">Game Freak (Firm)</ThreeDO:DerivedCreator>
+            </ThreeDO:Derived>
+        </ThreeDO:Origin>
+        <ThreeDO:SourceFormat ThreeDO:type="PUID" ThreeDO:value="fmt/902">.blend</ThreeDO:SourceFormat>
+        <ThreeDO:CreatedWith>
+            <ThreeDO:Software>
+                <ThreeDO:SoftwareName ThreeDO:type="LOC" ThreeDO:value="n 00063653">Blender</ThreeDO:SoftwareName>
+                <ThreeDO:SoftwareCreator ThreeDO:type="LOC" ThreeDO:value="n 2007052974">Blender Foundation</ThreeDO:SoftwareCreator>
+                <ThreeDO:SoftwareRightsType>License</ThreeDO:SoftwareRightsType>
+                <ThreeDO:SoftwareRightsStatement>GNU General Public License</ThreeDO:SoftwareRightsStatement>
+            </ThreeDO:Software>
+        </ThreeDO:CreatedWith>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>triangles</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>967</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Vertices>488</ThreeDO:Vertices>
+        <ThreeDO:FileSize>11000</ThreeDO:FileSize>
+        <ThreeDO:Textures>1</ThreeDO:Textures>
+        <ThreeDO:Materials>1</ThreeDO:Materials>
+        <ThreeDO:Rigged>false</ThreeDO:Rigged>
+        <ThreeDO:Normals>false</ThreeDO:Normals>
+        <ThreeDO:VertexColors>false</ThreeDO:VertexColors>
+        <ThreeDO:UVMapped>false</ThreeDO:UVMapped>
+        <ThreeDO:Tags>pokemon</ThreeDO:Tags>
+        <ThreeDO:Tags>pixelmon</ThreeDO:Tags>     
+    </ThreeDO:Object>
+    <ThreeDO:Rights>
+        <ThreeDO:RightsType>License</ThreeDO:RightsType>
+        <ThreeDO:RightsStatement>CC-0</ThreeDO:RightsStatement>
+    </ThreeDO:Rights>
+</ThreeDO:ThreeDO>

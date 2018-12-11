@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
+ xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd 3DO_xml_schema_edits.xsd"
+ xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+   <ThreeDO:Creator>
+       <ThreeDO:CreatorName>CITL Group</ThreeDO:CreatorName>
+       <ThreeDO:CreatorStatus>Staff</ThreeDO:CreatorStatus>
+       <ThreeDO:CreatorAffiliation>CITL</ThreeDO:CreatorAffiliation>
+   </ThreeDO:Creator>
+   <ThreeDO:Object>
+       <ThreeDO:ObjectTitle>Standing woman</ThreeDO:ObjectTitle>
+       <ThreeDO:ObjectIdentifier ThreeDO:type="objectID">3076da3924cd4ba19375845717bee31c</ThreeDO:ObjectIdentifier>
+       <ThreeDO:DateCreated>2016-12-12</ThreeDO:DateCreated>
+       <ThreeDO:Description>Standing woman, copy after karyatiden Inv. 1187 from “Erechtheion" at the Athens Acropolis. Restored by Thorvaldsen. Greek classic about 420 B.C. (Roman copy) Vatican Btaccio Nuovo Inv. 2296. The Royal Cast Collection (Copenhagen, Denmark). Made with Memento beta (now ReMake) from Autodesk.</ThreeDO:Description>
+       <ThreeDO:Origin>
+           <ThreeDO:RealObject>
+               <ThreeDO:ExistanceStatement>true</ThreeDO:ExistanceStatement>
+               <ThreeDO:Holding ThreeDO:type="LOC" ThreeDO:value="n 79061308">Inv. 2296</ThreeDO:Holding>
+           </ThreeDO:RealObject>
+       </ThreeDO:Origin>
+       <ThreeDO:SourceFormat ThreeDO:type="PUID" ThreeDO:value="fmt/1210">.obj</ThreeDO:SourceFormat>
+       <ThreeDO:CreatedWith>
+           <ThreeDO:Software>
+               <ThreeDO:SoftwareName>ReCap Photo</ThreeDO:SoftwareName>
+               <ThreeDO:SoftwareCreator ThreeDO:type="LOC" ThreeDO:value="n 88202301">Autodesk, Inc.</ThreeDO:SoftwareCreator>
+           </ThreeDO:Software>
+       </ThreeDO:CreatedWith>
+       <ThreeDO:Geometry>
+           <ThreeDO:GeometryType>triangles</ThreeDO:GeometryType>
+           <ThreeDO:GeometryAmount>409400</ThreeDO:GeometryAmount>
+       </ThreeDO:Geometry>
+       <ThreeDO:Vertices>206100</ThreeDO:Vertices>
+       <ThreeDO:FileSize>3000000</ThreeDO:FileSize>
+       <ThreeDO:Textures>1</ThreeDO:Textures>
+       <ThreeDO:Materials>1</ThreeDO:Materials>
+       <ThreeDO:Rigged>false</ThreeDO:Rigged>
+       <ThreeDO:Normals>true</ThreeDO:Normals>
+       <ThreeDO:VertexColors>false</ThreeDO:VertexColors>
+       <ThreeDO:UVMapped>true</ThreeDO:UVMapped>
+       <ThreeDO:Tags>greek</ThreeDO:Tags>
+       <ThreeDO:Tags>3d-scan</ThreeDO:Tags>
+       <ThreeDO:Tags>standing</ThreeDO:Tags>
+       <ThreeDO:Tags>classic</ThreeDO:Tags>
+       <ThreeDO:Tags>plaster</ThreeDO:Tags>
+       <ThreeDO:Tags>copy</ThreeDO:Tags>
+       <ThreeDO:Tags>mythology</ThreeDO:Tags>
+       <ThreeDO:Tags>roman</ThreeDO:Tags>
+       <ThreeDO:Tags>woman</ThreeDO:Tags>
+       <ThreeDO:Tags>sculpture</ThreeDO:Tags>
+   </ThreeDO:Object>
+   <ThreeDO:Rights>
+       <ThreeDO:RightsType>License</ThreeDO:RightsType>
+       <ThreeDO:RightsStatement>CC BY-NC 4.0</ThreeDO:RightsStatement>
+   </ThreeDO:Rights>
+</ThreeDO:ThreeDO>

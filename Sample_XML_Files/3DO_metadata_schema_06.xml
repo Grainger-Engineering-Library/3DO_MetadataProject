@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
+ xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd 3DO_xml_schema_edits.xsd"
+ xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <ThreeDO:Creator>
+        <ThreeDO:CreatorName ThreeDO:type="netID" ThreeDO:value="jsmith45">John Smith</ThreeDO:CreatorName>
+        <ThreeDO:CreatorStatus>Graduate student</ThreeDO:CreatorStatus>
+        <ThreeDO:CreatorStatus>Staff</ThreeDO:CreatorStatus>
+        <ThreeDO:CreatorAffiliation>Engineering</ThreeDO:CreatorAffiliation>
+    </ThreeDO:Creator>
+    <ThreeDO:Funding>
+        <ThreeDO:FundingAgency>NIH</ThreeDO:FundingAgency>
+        <ThreeDO:FundingNumber>NIH9829000245</ThreeDO:FundingNumber>
+    </ThreeDO:Funding>
+    <ThreeDO:Course>
+        <ThreeDO:CourseName ThreeDO:type="courseID" ThreeDO:value="IS562AO">Metadata in Theory and Practice</ThreeDO:CourseName>
+        <ThreeDO:CourseInstructor ThreeDO:type="netID" ThreeDO:value="rbettivi">Rhiannon Bettivia</ThreeDO:CourseInstructor>
+        <ThreeDO:CourseSemester>Fall</ThreeDO:CourseSemester>
+        <ThreeDO:CourseYear>2018</ThreeDO:CourseYear>
+    </ThreeDO:Course>
+    <ThreeDO:Object>
+        <ThreeDO:ObjectTitle>Stump in the meadow 1</ThreeDO:ObjectTitle>
+        <ThreeDO:ObjectIdentifier ThreeDO:type="objectID">95023859e97f44ddb654037c1932f65c</ThreeDO:ObjectIdentifier>
+        <ThreeDO:DateCreated>2017-09-17</ThreeDO:DateCreated>
+        <ThreeDO:Description>Stump in the meadow 1. A good reference or gameobject to a computer game.Photogrammetry from 97 photos.</ThreeDO:Description>
+        <ThreeDO:Origin>
+            <ThreeDO:Derived>
+                <ThreeDO:DerivedTitle ThreeDO:type="LOC" ThreeDO:value="9871628172">A famous stump</ThreeDO:DerivedTitle>
+                <ThreeDO:DerivedCreator ThreeDO:type="LOC" ThreeDO:value="n 80155453">Nintendo</ThreeDO:DerivedCreator>
+            </ThreeDO:Derived>
+            <ThreeDO:RealObject>
+                <ThreeDO:ExistanceStatement>true</ThreeDO:ExistanceStatement>
+                <ThreeDO:Holding ThreeDO:type="LOC" ThreeDO:value="n2005183814">1935.08.2777</ThreeDO:Holding>
+            </ThreeDO:RealObject>
+            <ThreeDO:OriginalWork>true</ThreeDO:OriginalWork>
+        </ThreeDO:Origin>
+        <ThreeDO:SourceFormat ThreeDO:type="PUID" ThreeDO:value="fmt/1009">.fbx</ThreeDO:SourceFormat>
+        <ThreeDO:CreatedWith>
+            <ThreeDO:Software>
+                <ThreeDO:SoftwareName>Blender</ThreeDO:SoftwareName>
+                <ThreeDO:SoftwareCreator>Blender Foundation</ThreeDO:SoftwareCreator>
+                <ThreeDO:SoftwareRightsType>License</ThreeDO:SoftwareRightsType>
+                <ThreeDO:SoftwareRightsStatement>GNU General Public License</ThreeDO:SoftwareRightsStatement>
+            </ThreeDO:Software>
+            <ThreeDO:Hardware>
+                <ThreeDO:HardwareName>MacBook Pro</ThreeDO:HardwareName>
+                <ThreeDO:HardwareCreator>Apple Inc</ThreeDO:HardwareCreator>
+            </ThreeDO:Hardware>
+        </ThreeDO:CreatedWith>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>triangle</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>40600</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Vertices>20600</ThreeDO:Vertices>
+        <ThreeDO:FileSize>476000</ThreeDO:FileSize>
+        <ThreeDO:Textures>3</ThreeDO:Textures>
+        <ThreeDO:Materials>1</ThreeDO:Materials>
+        <ThreeDO:Rigged>false</ThreeDO:Rigged>
+        <ThreeDO:Animation>
+            <ThreeDO:AnimatedRunTime>00:00:01:62</ThreeDO:AnimatedRunTime>
+        </ThreeDO:Animation>
+        <ThreeDO:Normals>true</ThreeDO:Normals>
+        <ThreeDO:VertexColors>true</ThreeDO:VertexColors>
+        <ThreeDO:UVMapped>true</ThreeDO:UVMapped>
+        <ThreeDO:Tags>tree</ThreeDO:Tags>
+        <ThreeDO:Tags>trunk</ThreeDO:Tags>
+        <ThreeDO:Tags>stump</ThreeDO:Tags>
+        <ThreeDO:Tags>reference</ThreeDO:Tags>
+        <ThreeDO:Tags>gameobject</ThreeDO:Tags>
+    </ThreeDO:Object>
+    <ThreeDO:Rights>
+        <ThreeDO:RightsType>License</ThreeDO:RightsType>
+        <ThreeDO:RightsStatement>CC BY 4.0</ThreeDO:RightsStatement>
+    </ThreeDO:Rights>
+</ThreeDO:ThreeDO>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThreeDO:ThreeDO xmlns:xsi1="http://www.w3.org/2001/XMLSchema-instance"
+ xsi1:schemaLocation="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd 3DO_xml_schema_edits.xsd"
+ xmlns:ThreeDO="https://github.com/hburns2/3DO_MetadataProject/blob/master/3DO_xml_schema.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <ThreeDO:Creator>
+        <ThreeDO:CreatorName ThreeDO:type="netID" ThreeDO:value="jhenerey35">Jakob Henerey </ThreeDO:CreatorName>
+        <ThreeDO:CreatorStatus>Graduate student</ThreeDO:CreatorStatus>
+        <ThreeDO:CreatorStatus>Staff</ThreeDO:CreatorStatus>
+        <ThreeDO:CreatorAffiliation>Biology</ThreeDO:CreatorAffiliation>
+    </ThreeDO:Creator>
+    <ThreeDO:Course>
+        <ThreeDO:CourseName ThreeDO:type="courseID" ThreeDO:value="IS562AO">Metadata in Theory and Practice</ThreeDO:CourseName>
+        <ThreeDO:CourseInstructor ThreeDO:type="netID" ThreeDO:value="rbettivi">Rhiannon Bettivia</ThreeDO:CourseInstructor>
+        <ThreeDO:CourseSemester>Fall</ThreeDO:CourseSemester>
+        <ThreeDO:CourseYear>2018</ThreeDO:CourseYear>
+    </ThreeDO:Course>
+    <ThreeDO:Object>
+        <ThreeDO:ObjectTitle>Bee</ThreeDO:ObjectTitle>
+        <ThreeDO:ObjectIdentifier ThreeDO:type="objectID">d4683f98637745f1a989bb013215c8de</ThreeDO:ObjectIdentifier>
+        <ThreeDO:DateCreated>2018-11-15</ThreeDO:DateCreated>
+        <ThreeDO:Description>A Drone Bee From 3D Viewer.</ThreeDO:Description>
+        <ThreeDO:Origin>
+            <ThreeDO:OriginalWork>true</ThreeDO:OriginalWork>
+        </ThreeDO:Origin>
+        <ThreeDO:SourceFormat>.glb</ThreeDO:SourceFormat>
+        <ThreeDO:CreatedWith>
+            <ThreeDO:Software>
+                <ThreeDO:SoftwareName>Blender</ThreeDO:SoftwareName>
+                <ThreeDO:SoftwareCreator>Blender Foundation</ThreeDO:SoftwareCreator>
+                <ThreeDO:SoftwareRightsType>License</ThreeDO:SoftwareRightsType>
+                <ThreeDO:SoftwareRightsStatement>GNU General Public License, GPL</ThreeDO:SoftwareRightsStatement>
+            </ThreeDO:Software>
+        </ThreeDO:CreatedWith>
+        <ThreeDO:Geometry>
+            <ThreeDO:GeometryType>triangle</ThreeDO:GeometryType>
+            <ThreeDO:GeometryAmount>51700</ThreeDO:GeometryAmount>
+        </ThreeDO:Geometry>
+        <ThreeDO:Vertices>27400</ThreeDO:Vertices>
+        <ThreeDO:FileSize>1013000</ThreeDO:FileSize>
+        <ThreeDO:Textures>5</ThreeDO:Textures>
+        <ThreeDO:Materials>3</ThreeDO:Materials>
+        <ThreeDO:Rigged>true</ThreeDO:Rigged>
+        <ThreeDO:Animation>
+            <ThreeDO:AnimatedRunTime>00:00:09:83</ThreeDO:AnimatedRunTime>
+        </ThreeDO:Animation>
+        <ThreeDO:Normals>true</ThreeDO:Normals>
+        <ThreeDO:VertexColors>false</ThreeDO:VertexColors>
+        <ThreeDO:UVMapped>true</ThreeDO:UVMapped>
+        <ThreeDO:Tags>windows</ThreeDO:Tags>
+        <ThreeDO:Tags>bee</ThreeDO:Tags>
+        <ThreeDO:Tags>windows-10</ThreeDO:Tags>
+    </ThreeDO:Object>
+    <ThreeDO:Rights>
+        <ThreeDO:RightsType>License</ThreeDO:RightsType>
+        <ThreeDO:RightsStatement>CC Attribution</ThreeDO:RightsStatement>
+    </ThreeDO:Rights>
+</ThreeDO:ThreeDO>
